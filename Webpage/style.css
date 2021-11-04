@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 .scroll-container,
 .scroll-area {
   max-width: 100%;
