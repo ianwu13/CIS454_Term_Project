@@ -1,0 +1,31 @@
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.scroll-container, .scroll-area {
+  max-width: 850px;
+  height:100vh;
+  font-size: 60px;
+  margin: 0 auto;
+}
+
+.scroll-container {
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-area {
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .main {
+  background-color: #E4AD7C;
+}
+
+.about {
+  background-color: #FCF0CC;
+} */
