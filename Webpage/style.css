@@ -3,11 +3,11 @@ body {
   overflow: hidden;
 }
 
-.scroll-container,
-.scroll-area {
+.scroll-container, .scroll-area {
   max-width: 100%;
   height: 100vh;
   font-size: 60px;
+  margin: 0 auto;
 }
 
 .scroll-container {
@@ -17,23 +17,74 @@ body {
 
 .scroll-area {
   scroll-snap-align: start;
-}
-
-.scroll-container,
-.scroll-area {
-  margin: 0 auto;
-}
-
-.scroll-area {
-  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.scroll-area:nth-of-type(1) {
+/*--- About Cards CSS ---*/
+
+.content {
+  height: 90%;
+  background: #FCF0CC;
+  text-align: center;
+  padding: 48px 0;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  height: inherit;
+}
+
+.card {
+  width: 25%;
+  position: relative;
+  height: inherit;
+  perspective: 150em;
+}
+
+.card__side {
+  border-radius: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+  backface-visibility: hidden;
+  transition: all 0.6s ease;
+  box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.2);
+}
+
+.card__side--front {
+  background-color: #fff;
+}
+
+.card__side--back {
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+.card__side--front-1, .card__side--back-1 {
+  background: #D88E83;
+}
+
+.card__side--front-2, .card__side--back-2 {
   background: #E4AD7C;
 }
 
-.scroll-area:nth-of-type(2) {
-  background: #FCF0CC;
+.card__side--front-3, .card__side--back-3 {
+  background: #CB6C8E;
+}
+
+.card:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card__side--back {
+  transform: rotate(0);
+}
+
+.card__description {
+  text-transform: uppercase;
+  font-size: 5em;
 }
