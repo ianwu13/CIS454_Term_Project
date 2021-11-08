@@ -28,12 +28,45 @@ body {
   height: 96px;
   background-color: #A64253;
   color: #FCF0CC;
+  text-align: center;
+  padding-top: 15px;
+}
+
+/* --- Mapping Area --- */
+.work-area {
+  height: 90%;
+  background: #E4AD7C;
+  text-align: center;
+  padding: 48px 0;
+  color: #A64253;
+}
+
+.mappings {
+  display: flex;
+  justify-content: space-evenly;
+  height: inherit;
+}
+
+.mapping-internet, .mapping-wifi {
+  width: 45%;
+  position: relative;
+  height: inherit;
+  perspective: 150em;
+  border-radius: 25px;
+}
+
+.mapping-internet {
+  background-color: #FCF0CC;
+}
+
+.mapping-wifi {
+  background-color: #FCF0CC;
 }
 
 /*--- About Cards CSS ---*/
 
 .content {
-  height: 80%;
+  height: 92.5%;
   background: #FCF0CC;
   text-align: center;
   padding: 48px 0;
@@ -95,5 +128,8 @@ body {
 
 .card__description {
   text-transform: uppercase;
-  font-size: 5em;
+  font-size: .75em;
+  text-align: center;
+  padding-top: 50%;
+  color: #FCF0CC;
 }
