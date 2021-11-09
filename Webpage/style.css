@@ -1,3 +1,20 @@
+/* --- Scrollbar Testing --- */
+.scroll-container::-webkit-scrollbar {
+  width: 15px;               /* width of the entire scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #E4AD7C;        /* color of the tracking area */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #D88E83;    /* color of the scroll thumb */
+  border-radius: 25px;       /* roundness of the scroll thumb */
+  border: 3px solid #E4AD7C;  /* creates padding around scroll thumb */
+}
+
+/* --- Main Area --- */
+
 body {
   margin: 0;
   overflow: hidden;
