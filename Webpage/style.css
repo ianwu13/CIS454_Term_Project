@@ -8,7 +8,7 @@
 }
 
 .scroll-container::-webkit-scrollbar-thumb {
-  background-color: #D88E83;    /* color of the scroll thumb */
+  background-color: #CB6C8E;    /* color of the scroll thumb */
   border-radius: 25px;       /* roundness of the scroll thumb */
   border: 3px solid #E4AD7C;  /* creates padding around scroll thumb */
 }
@@ -70,13 +70,6 @@ body {
   height: inherit;
   perspective: 150em;
   border-radius: 25px;
-}
-
-.mapping-internet {
-  background-color: #FCF0CC;
-}
-
-.mapping-wifi {
   background-color: #FCF0CC;
 }
 
