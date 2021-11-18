@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.content {
+    height: 100vh;
+    background: #FCF0CC;
+    text-align: center;
+    padding: 4em 0;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 25%;
+    position: relative;
+    height: 25em;
+    perspective: 150em;
+}
+
+.card__side {
+    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25em;
+    backface-visibility: hidden;
+    transition: all 0.6s ease;
+    box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.2);
+}
+
+.card__side--front {
+    background-color: #fff;
+}
+
+.card__side--back {
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.card__side--front-1, .card__side--back-1 {
+    background: #D88E83;
+}
+
+.card__side--front-2, .card__side--back-2 {
+    background: #E4AD7C;
+}
+
+.card__side--front-3, .card__side--back-3 {
+    background: #CB6C8E;
+}
+
+.card:hover .card__side--front {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .card__side--back {
+    transform: rotate(0);
+}
+
+.card__description {
+    text-transform: uppercase;
+    font-size: 5em;
+    padding: 1em 0;
+}
