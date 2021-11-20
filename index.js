@@ -1,5 +1,6 @@
 const fs = require('fs')
 const http = require('http')
+const express = require('express')
 const port = 3000
 
 const server = http.createServer(function(req, res) {
@@ -10,6 +11,8 @@ const server = http.createServer(function(req, res) {
             res.write('Error: File Not Found')
         } else {
             res.write(data)
+            var readStream = fileSystem.createReadStream('./Webpage/style.css')
+            readStream.pipe(res)
         }
         res.end()
     })
