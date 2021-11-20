@@ -4,7 +4,7 @@
   "description": "Scraping data on ISPs in Cleveland, OH. This data will then be provided through a website hosted on the Cleveland State Computer Science Department servers.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
