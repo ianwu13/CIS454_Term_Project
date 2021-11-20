@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/ianwu13/CIS454_Term_Project/issues"
   },
-  "homepage": "https://github.com/ianwu13/CIS454_Term_Project#readme"
+  "homepage": "https://github.com/ianwu13/CIS454_Term_Project#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "start": "^5.1.0"
+  }
 }
