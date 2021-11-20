@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'CSUInternetAccess'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9F04794500BA49AAA6CE8EEEA2D0506F }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: .
