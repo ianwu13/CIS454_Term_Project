@@ -1,13 +1,15 @@
+const http = require('http')
+const port = 3000
 
-'use strict';
-const express = require('express');
-// Constants
-const PORT = 8080;
-const HOST = '0.0.0.0';
-// App
-const app = express();
-app.get('/', (req, res) => {
-  res.sendfile('./Webpage/main.html' );
-});
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+const server = http.createServer(function(req, res) {
+    res.write('Hello Node')
+    res.end()
+})
+
+server.listen(port, function(error) {
+    if (error) {
+        console.log('something went wrong', error)
+    } else {
+        console.log('server is listening on port' + port)
+    }
+})
