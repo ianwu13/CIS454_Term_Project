@@ -93,8 +93,8 @@ body {
   margin-left: 1em;
 }
 
-.isp label {
-  margin-left: 1em;
+.isp input {
+  margin-right: .5em;
 }
 
 /*--- About Cards CSS ---*/
