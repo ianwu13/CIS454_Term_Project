@@ -13,6 +13,20 @@
   border: 3px solid #E4AD7C;  /* creates padding around scroll thumb */
 }
 
+.mapping-internet::-webkit-scrollbar {
+  width: 15px;               /* width of the entire scrollbar */
+}
+
+.mapping-internet::-webkit-scrollbar-track {
+  background: #E4AD7C;        /* color of the tracking area */
+}
+
+.mapping-internet::-webkit-scrollbar-thumb {
+  background-color: #CB6C8E;    /* color of the scroll thumb */
+  border-radius: 25px;       /* roundness of the scroll thumb */
+  border: 3px solid #E4AD7C;  /* creates padding around scroll thumb */
+}
+
 /* --- Main Area --- */
 
 body {
@@ -39,6 +53,36 @@ body {
   justify-content: center;
 }
 
+table {
+  visibility: hidden;
+  font-size: 30px;
+  display: table;
+  width: 95%;
+  text-align: center;
+  align-self: center;
+  margin-top: 2.5%;
+  border: solid;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  background: #D88E83;
+  color: #FCF0CC;
+  border: none;
+  height: 1.75em;
+  border-radius: 25px;
+}
+
+button {
+  background: #A64253;
+  color: #FCF0CC;
+  border: none;
+  border-radius: 25px;
+  height: 2em;
+  width: 6em;
+}
+
 /*--- Header Bars CSS ---*/
 
 .header-bar {
@@ -60,10 +104,10 @@ body {
 
 .mapping-internet {
   height: 1.5em;
-  text-align: left;
+  text-align: center;
   box-sizing: border-box;
-  padding-left: .6em;
   padding-top: .5%;
+  justify-content: center;
 }
 
 .mapping-wifi {

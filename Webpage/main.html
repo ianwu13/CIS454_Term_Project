@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Internet Mapping</title>
+  <title>CSU Internet Access</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="shortcut icon" type="image/jpg" href="favicon.ico" />
 </head>
@@ -12,11 +12,11 @@
 
   <div class="scroll-container">
     <div class="scroll-area" style="background: #E4AD7C">
-      <div class="header-bar">Internet Mapping</div>
+      <div class="header-bar">CSU Internet Access</div>
 
       <section class="work-area">
         <div class="mappings">
-          <div class="mapping-internet">ISP Options:
+          <div class="mapping-internet" id="mapping-internet">ISP Options:
             <form class="isp" onsubmit="return false">
               <label for="address">Address:</label>
               <input type="text" id="address" name="address">
@@ -26,8 +26,9 @@
               <input type="text" id="zip" name="zip">
               <button type="submit">Submit</button>
             </form>
+            <table id="table"></table>
           </div>
-          <div class="mapping-wifi">Heatmap</div>
+          <div class="mapping-wifi" id="mapping-wifi">Heatmap</div>
         </div>
       </section>
 
@@ -79,20 +80,72 @@
     </div>
   </div>
 
-  <script type="text/javascript">
+  <script>
+
+  var s = '{"44109" :{ "Cox":[{"plan_name": "Fiber", "speed" : "1000 MBPS", "price" : "$60"},{"plan_name": "Fiber", "speed" : "1000 MBPS", "price" : "$60"}], "Verizon":[{"plan_name": "Fiber", "speed" : "1000 MBPS", "price" : "$20"}]}}';
 
     function handleSubmit(event) {
       event.preventDefault();
 
-      const data = new FormData(event.target);
-      const value = data.get('zip');
+      //Change screen
+      document.getElementById('mapping-wifi').style.visibility = 'hidden';
+      document.getElementById('mapping-internet').style.height = '8.5em';
+      document.getElementById('mapping-internet').style.overflow = 'scroll';
+      document.getElementById('table').style.visibility = 'visible';
 
-      console.log("clicked");
+      //table
+      var table = document.getElementById("table");
+      table.innerHTML = "";
+      var row = table.insertRow(0);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+
+      cell1.innerHTML = "ISP";
+      cell2.innerHTML = "Plan Name";
+      cell3.innerHTML = "Speed";
+      cell4.innerHTML = "Price";
+
+
+      const data = new FormData(event.target);
+      const zip = data.get('zip');
+
+      var rowNum = 1;
+
+      const obj = JSON.parse(s);
+      jzips = Object.keys(obj);
+      for(var x in jzips) {
+        var jzip = jzips[x]; //zip code
+        if(jzip == zip) {
+          const zipObj = obj[jzip];
+          providers = Object.keys(zipObj);
+          for(var x in providers) {
+            var provider = providers[x]; //provider name
+            const arrayInfo = zipObj[provider];
+            info = Object.keys(arrayInfo);
+            for(var x in info) {
+              var row = table.insertRow(rowNum);
+              var cell1 = row.insertCell(0);
+              var cell2 = row.insertCell(1);
+              var cell3 = row.insertCell(2);
+              var cell4 = row.insertCell(3);
+              cell1.innerHTML = provider;
+              cell2.innerHTML = arrayInfo[info[x]].plan_name;
+              cell3.innerHTML = arrayInfo[info[x]].speed;
+              cell4.innerHTML = arrayInfo[info[x]].price;
+              rowNum++;
+
+            }
+          }
+
+        }
+      }
+
     }
 
     const form = document.querySelector('form');
     form.addEventListener('submit', handleSubmit);
-
 
   </script>
 
