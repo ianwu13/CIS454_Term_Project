@@ -81,6 +81,7 @@ input {
   border: none;
   height: 1.75em;
   border-radius: 25px;
+  text-align: center;
 }
 
 button {
