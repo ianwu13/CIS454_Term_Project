@@ -27,6 +27,10 @@
   border: 3px solid #E4AD7C;  /* creates padding around scroll thumb */
 }
 
+.mapping-internet::-webkit-scrollbar-corner {
+background-color: #E4AD7C;
+}
+
 /* --- Main Area --- */
 
 body {
@@ -66,7 +70,7 @@ table {
   margin-bottom: 2.5%;
 }
 
-tr {
+th {
   font-size: 28px;
   font-weight: bold;
 }
