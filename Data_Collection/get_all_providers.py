@@ -17,11 +17,11 @@ def main():
         html_element_tree = etree.ElementTree(element_html)
 
         # Create a list of tags for options
-        options_list = html_element_tree.xpath(
-            "//div[@class='row collapse provider-card provider-card--item main-card margin-bottom ']")
+        options_list = html_element_tree.xpath("//div[@class='tabs-panel is-active']/div[@class='row collapse provider-card provider-card--item main-card margin-bottom ']")
 
         # Get all new providers
         for option in options_list:
+            tree = etree.ElementTree(option)
             if option.attrib["data-brand"] not in providers:
                 providers.append(option.attrib["data-brand"])
 
