@@ -55,7 +55,6 @@ body {
 
 table {
   visibility: hidden;
-  font-size: 30px;
   display: table;
   width: 95%;
   text-align: center;
@@ -64,6 +63,16 @@ table {
   border: solid;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2.5%;
+}
+
+tr {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+td {
+  font-size: 20px;
 }
 
 input {
