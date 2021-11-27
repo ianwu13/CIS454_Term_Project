@@ -226,11 +226,15 @@ button {
   color: #FCF0CC;
 }
 
+#special {
+  color: #A64253;
+}
+
 .card__side--front .card__description {
   padding-top: 50%;
 }
 
 .card__side--back .card__description {
   padding: 16px;
-  padding-top: 20%;
+  padding-top: 15%;
 }
