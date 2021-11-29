@@ -31,6 +31,18 @@
 background-color: #E4AD7C;
 }
 
+/* --- Map Area --- */
+
+#map_d3da4827e7034a498b92f35a7aa4daa9 {
+
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
 /* --- Main Area --- */
 
 body {
