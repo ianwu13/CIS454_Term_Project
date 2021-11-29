@@ -165,6 +165,9 @@ button {
 
 .isp input {
   margin-right: .5em;
+  font-family: default;
+  font-size: default;
+  font: default;
 }
 
 /*--- About Cards CSS ---*/
